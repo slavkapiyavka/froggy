@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .body {
-  @apply grid min-h-screen place-items-center;
+  @apply grid min-h-screen place-items-center bg-white dark:bg-black dark:text-white transition-colors;
 }

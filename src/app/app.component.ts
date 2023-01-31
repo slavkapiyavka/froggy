@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ColorSchemeService} from "../shared/services/color-scheme.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'froggy';
+
+  constructor(public color: ColorSchemeService) {
+  }
+
+  ngOnInit() {
+    this.color.darkMode$.subscribe() ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  }
 }
