@@ -1,14 +1,14 @@
 .toggle {
-  opacity: 0.6;
-  transition: opacity 125ms;
+    opacity: 0.6;
+    transition: opacity 125ms;
 
-  &:hover {
-    opacity: 1;
-  }
+    &:hover {
+        opacity: 1;
+    }
 
-  &.absolute {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-  }
+    &.absolute {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
 }

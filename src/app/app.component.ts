@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
-import {ColorSchemeService} from "../shared/services/color-scheme.service";
+import { Component } from '@angular/core'
+import { ColorSchemeService } from '../shared/services/color-scheme.service'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'froggy';
+    title = 'froggy'
 
-  constructor(public color: ColorSchemeService) {
-  }
+    constructor(public color: ColorSchemeService) {}
 
-  ngOnInit() {
-    this.color.darkMode$.subscribe() ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
-  }
+    ngOnInit() {
+        this.color.darkMode$.subscribe()
+            ? document.documentElement.classList.add('dark')
+            : document.documentElement.classList.remove('dark')
+    }
 }

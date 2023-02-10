@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'styles/styles';
+
 .body {
-  @apply grid min-h-screen place-items-center bg-white dark:bg-black dark:text-white transition-colors;
+    // tailwind styles
+    @apply grid min-h-screen place-items-center m-0;
+
+    // light theme
+    @apply bg-white text-black-600;
+
+    // dark theme
+    @apply dark:bg-black-600 dark:text-white;
+
+    // regular styles
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
