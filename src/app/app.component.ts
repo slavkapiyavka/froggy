@@ -12,8 +12,8 @@ export class AppComponent {
     constructor(public color: ColorSchemeService) {}
 
     ngOnInit() {
-        this.color.darkMode$.subscribe()
-            ? document.documentElement.classList.add('dark')
-            : document.documentElement.classList.remove('dark')
+        this.color.darkMode$.subscribe(() =>
+            document.documentElement.classList.toggle('dark')
+        )
     }
 }
